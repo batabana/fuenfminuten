@@ -1,0 +1,11 @@
+section {
+    padding-top: 80px;
+}
+
+.navbar {
+    justify-content: space-between;
+}
+
+form {
+    width: 50%;
+}
