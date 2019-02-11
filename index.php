@@ -21,6 +21,8 @@ if(!empty($_POST)) {
 
     if(!$sth->execute()) {
       $execErr = "Fehler beim Speichern der Daten";
+    } else {
+        $success = true;
     }
 
     $sth = null;
@@ -65,30 +67,27 @@ if(!empty($_POST)) {
                     aria-label="Toggle navigation"
                 >
                     <span class="navbar-toggler-icon"></span>
-                    <span class="icon-menu"></span>
-                    <span class="icon-menu"></span>
-                    <span class="icon-menu"></span>
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="main-navbar">
-                <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+                <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix" id="navbar">
                     <li class="nav-item">
-                        <a class="nav-link" href="/#über">
+                        <a class="nav-link" href="#ueber">
                             Über
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#anmeldung">
+                        <a class="nav-link" href="#anmeldung">
                             Anmeldung
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#kontakt">
+                        <a class="nav-link" href="#kontakt">
                             Kontakt
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#faq">
+                        <a class="nav-link" href="#faq">
                             FAQ
                         </a>
                     </li>
@@ -105,7 +104,7 @@ if(!empty($_POST)) {
                 </ul>
             </div>
         </nav>
-        <header>
+        <header id="start">
             <div class="overlay"></div>
             <div class="hero-text">
                 <div>
@@ -113,15 +112,10 @@ if(!empty($_POST)) {
                     <h4>Die kürzesten Straßenkünstler-Aktionen Deutschlands</h4>
                 </div>
             </div>
-            <img src="assets/header.jpg" class="img-fluid" alt="header" />
+            <img src="assets/header.jpg" class="img-fluid" id="hero" alt="header" />
         </header>
         <main>
-            <?php 
-                echo $execErr; 
-                echo $connErr; 
-              ?>
-
-            <section id="über">
+            <section id="ueber">
                 <div class="container">
                     <div class="col-lg-8 mx-auto">
                         <p>
@@ -136,12 +130,14 @@ if(!empty($_POST)) {
                                 >Ein Musiker*, zwei Tänzer*, eine Kamera und Chemnitz.</span
                             >
                         </p>
-                        <p class="text-center">
-                            <span class="font-italic"
-                                >"Das Gute Gelingen ist zwar nichts Kleines, aber es fängt mit Kleinigkeiten an."</span
-                            >
-                            - Sokrates
-                        </p>
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0">
+                                "Das Gute Gelingen ist zwar nichts Kleines, aber es fängt mit Kleinigkeiten an."
+                            </p>
+                            <footer class="blockquote-footer">
+                                <cite title="Source Title">Sokrates</cite>
+                            </footer>
+                        </blockquote>
                         <p>
                             Dadurch wollen wir auch der Welt zeigen, dass die Entscheidung in der Hand jedes Menschen
                             liegt, das Alltagsleben etwas zu verbessern und den Ort, an dem wir leben, neu zu entdecken
@@ -156,8 +152,17 @@ if(!empty($_POST)) {
             </section>
             <section id="anmeldung">
                 <div class="container">
+                    <?php 
+                        if ($success) {
+                            echo "<div class='alert alert-success col-lg-8 mx-auto' role='alert'>Daten erfolgreich übermittelt</div>";
+                        } else if (isset($execErr)) {
+                            echo "<div class='alert alert-danger col-lg-8 mx-auto' role='alert'>$execErr</div>";
+                        } else if (isset($connErr)) {
+                            echo "<div class='alert alert-danger col-lg-8 mx-auto' role='alert'>$connErr</div>";
+                        }
+                    ?>
                     <div class="col-lg-8 mx-auto">
-                        <form action="/" method="post">
+                        <form action="/#anmeldung" method="post">
                             <h2>Sag’ uns, wie wir dich in Szene setzen können</h2>
                             <div class="form-row">
                                 <div class="col form-group">
@@ -222,7 +227,12 @@ if(!empty($_POST)) {
                                 <input name="woher" type="text" class="form-control" />
                             </div>
                             <div class="form-check form-group">
-                                <input class="form-check-input" name="datenschutz" type="checkbox" required="required" />
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="datenschutz"
+                                    required="required"
+                                />
                                 <label class="form-check-label">
                                     Ich akzeptiere die
                                     <a href="/datenschutz.html" target="_blank">Datenschutzerklärung</a>.
@@ -236,7 +246,7 @@ if(!empty($_POST)) {
             <section id="kontakt">
                 <div class="container">
                     <div class="col-lg-8 mx-auto">
-                        <p>
+                        <p class="lead">
                             Hast du Fragen, Anregungen, Kritik, Lob, Vorschläge, eine Socke verloren oder Lust, mit
                             jemandem zu lachen? Melde dich bei uns und mach’ dir keinen Kopf über die Formulierung der
                             E-Mail, wir freuen uns auch über ein einfaches “Hallo” :D
@@ -285,8 +295,8 @@ if(!empty($_POST)) {
             </div>
         </footer>
         <script
-            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"
         ></script>
         <script
@@ -294,5 +304,6 @@ if(!empty($_POST)) {
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"
         ></script>
+        <script src="script.js"></script>
     </body>
 </html>

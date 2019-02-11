@@ -3,11 +3,11 @@ body {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 80px;
 }
 
 h4 {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 p,
@@ -65,10 +65,28 @@ header {
     background-color: #b1bed5;
 }
 
+#start {
+    margin-top: 56px;
+}
+
 main {
     min-height: 90vh;
 }
 
 header {
     font-family: "Amatic SC", cursive;
+}
+
+.alert.hide {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
 }
