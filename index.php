@@ -167,11 +167,11 @@ if(!empty($_POST)) {
                             <div class="form-row">
                                 <div class="col form-group">
                                     <label>Ich heiße:</label>
-                                    <input name="name" class="form-control" type="text" />
+                                    <input name="name" class="form-control" type="text" placeholder="Name" />
                                 </div>
                                 <div class="col form-group">
                                     <label>Alter:</label>
-                                    <input name="alter" class="form-control" type="text" placeholder="" />
+                                    <input name="alter" class="form-control" type="text" placeholder="Alter" />
                                     <!-- <small class="form-text text-muted">
                                 Geburtsdatum bei Minderjährigen, sonst reicht das Jahr
                             </small> -->
@@ -180,7 +180,7 @@ if(!empty($_POST)) {
                             <div class="form-row">
                                 <div class="col form-group">
                                     <label>Ich spiele mit folgenden Instrumenten:</label>
-                                    <input name="instrumente" class="form-control" type="text" />
+                                    <input name="instrumente" class="form-control" type="text" placeholder="Akkordeon, Mundharmonika, .." />
                                 </div>
                                 <div class="col form-group">
                                     <label>Folgende Musikrichtungen:</label>
@@ -201,7 +201,7 @@ if(!empty($_POST)) {
                             <div class="form-row">
                                 <div class="col form-group">
                                     <span>E-Mail:</span>
-                                    <input name="email" class="form-control" type="email" />
+                                    <input name="email" class="form-control" type="email" placeholder="name@example.de" />
                                 </div>
                                 <div class="col form-group">
                                     <span>Telefon:</span>
@@ -224,7 +224,7 @@ if(!empty($_POST)) {
                             </div>
                             <div class="form-group">
                                 <span>Wie bist du auf uns aufmerksam geworden?</span>
-                                <input name="woher" type="text" class="form-control" />
+                                <input name="woher" type="text" class="form-control" placeholder="Instagram, Facebook, Plakate, Flyer, Freunde, .." />
                             </div>
                             <div class="form-check form-group">
                                 <input
