@@ -51,6 +51,7 @@ if(!empty($_POST)) {
             integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     </head>
     <body>
@@ -94,11 +95,6 @@ if(!empty($_POST)) {
                     <li class="nav-item">
                         <a class="nav-link" href="impressum.html">
                             Impressum
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="datenschutz.html">
-                            Datenschutz
                         </a>
                     </li>
                 </ul>
@@ -164,12 +160,12 @@ if(!empty($_POST)) {
                     <div class="col-lg-8 mx-auto">
                         <form action="/#anmeldung" method="post">
                             <h2>Sag’ uns, wie wir dich in Szene setzen können</h2>
-                            <div class="form-row">
-                                <div class="col form-group">
+                            <div class="row form-row">
+                                <div class="col-sm form-group">
                                     <label>Ich heiße:</label>
                                     <input name="name" class="form-control" type="text" placeholder="Name" />
                                 </div>
-                                <div class="col form-group">
+                                <div class="col-sm form-group">
                                     <label>Alter:</label>
                                     <input name="alter" class="form-control" type="text" placeholder="Alter" />
                                     <!-- <small class="form-text text-muted">
@@ -177,37 +173,47 @@ if(!empty($_POST)) {
                             </small> -->
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="col form-group">
+                            <div class="row form-row">
+                                <div class="col-sm form-group">
                                     <label>Ich spiele mit folgenden Instrumenten:</label>
-                                    <input name="instrumente" class="form-control" type="text" placeholder="Akkordeon, Mundharmonika, .." />
+                                    <input
+                                        name="instrumente"
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="Akkordeon, Mundharmonika, .."
+                                    />
                                 </div>
-                                <div class="col form-group">
+                                <div class="col-sm form-group">
                                     <label>Folgende Musikrichtungen:</label>
                                     <input name="musikrichtungen" class="form-control" type="text" />
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="col form-group">
+                            <div class="row form-row">
+                                <div class="col-sm form-group">
                                     <span>Ich stelle Folgendes dar:</span>
                                     <input name="disziplin" class="form-control" type="text" />
                                 </div>
-                                <div class="col form-group">
+                                <div class="col-sm form-group">
                                     <span>Zu folgender Musik:</span>
                                     <input name="musikbegleitung" class="form-control" type="text" />
                                 </div>
                             </div>
                             <span>Wie können wir dich kontaktieren?</span>
-                            <div class="form-row">
-                                <div class="col form-group">
+                            <div class="row form-row">
+                                <div class="col-sm form-group">
                                     <span>E-Mail:</span>
-                                    <input name="email" class="form-control" type="email" placeholder="name@example.de" />
+                                    <input
+                                        name="email"
+                                        class="form-control"
+                                        type="email"
+                                        placeholder="name@example.de"
+                                    />
                                 </div>
-                                <div class="col form-group">
+                                <div class="col-sm form-group">
                                     <span>Telefon:</span>
                                     <input name="telefon" class="form-control" type="text" />
                                 </div>
-                                <div class="col form-group">
+                                <div class="col-sm form-group">
                                     <span>Bevorzugte Kontaktzeiten:</span>
                                     <input name="kontaktzeiten" class="form-control" type="text" />
                                 </div>
@@ -224,7 +230,12 @@ if(!empty($_POST)) {
                             </div>
                             <div class="form-group">
                                 <span>Wie bist du auf uns aufmerksam geworden?</span>
-                                <input name="woher" type="text" class="form-control" placeholder="Instagram, Facebook, Plakate, Flyer, Freunde, .." />
+                                <input
+                                    name="woher"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Instagram, Facebook, Plakate, Flyer, Freunde, .."
+                                />
                             </div>
                             <div class="form-check form-group">
                                 <input
@@ -291,7 +302,25 @@ if(!empty($_POST)) {
         </main>
         <footer class="py-4 bg-dark">
             <div class="container">
-                <p class="m-0 text-center text-white">&copy; Fünf Minuten 2019</p>
+                <div class="row">
+                    <div class="col-sm">
+                        <a
+                            href="https://www.facebook.com/fuenfminuteneu"
+                            target="_blank"
+                            class="fa fa-facebook mr-3"
+                        ></a>
+                        <a
+                            href="https://www.instagram.com/fuenfminuteneu/"
+                            target="_blank"
+                            class="fa fa-instagram mr-3"
+                        ></a>
+                        <a href="https://twitter.com/fuenfminuteneu" target="_blank" class="fa fa-twitter mr-3"></a>
+                        <a href="https://www.youtube.com/channel/UC-PGCE6J0Uy8f97_ZcBWKRg" target="_blank" class="fa fa-youtube"></a>
+                    </div>
+                    <div class="col-sm">
+                        <p class="m-0 text-right text-white">&copy; Fünf Minuten 2019</p>
+                    </div>
+                </div>
             </div>
         </footer>
         <script
