@@ -56,7 +56,9 @@ if(!empty($_POST)) {
     </head>
     <body>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="/">Fünf Minuten</a>
+        <a class="navbar-brand" href="/"
+                ><img src="assets/logo.png" alt="logo" class="logo" /><span class="logo-text">Fünf Minuten</span></a
+            >
             <div class="navbar-header">
                 <button
                     class="navbar-toggler"
@@ -108,7 +110,7 @@ if(!empty($_POST)) {
                     <h4>Die kürzesten Straßenkünstler-Aktionen Deutschlands</h4>
                 </div>
             </div>
-            <img src="assets/header.jpg" class="img-fluid" id="hero" alt="header" />
+            <img src="assets/header1.png" class="img-fluid" id="hero" alt="header" />
         </header>
         <main>
             <section id="ueber">
@@ -269,6 +271,7 @@ if(!empty($_POST)) {
                         <p>
                             Dieses Projekt wird gefördert von der Stadt Chemnitz.
                         </p>
+                        <img src="assets/khs2025.png" alt="logo-chemnitz" class="logo-chemnitz" />
                     </div>
                 </div>
             </section>
