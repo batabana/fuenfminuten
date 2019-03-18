@@ -4,7 +4,7 @@ if(!empty($_POST)) {
   try {
     $dbh = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sth = $dbh->prepare("INSERT INTO Kontaktformular (name, `alter`, instrumente, musikrichtungen, disziplin, musikbegleitung, `e-mail`, telefon, kontaktzeiten, motivation, anmerkungen, woher, datenschutz) VALUES (:name, :alter, :instrumente, :musikrichtungen, :disziplin, :musikbegleitung, :email, :telefon, :kontaktzeiten, :motivation, :anmerkungen, :woher, :datenschutz)"); 
+    $sth = $dbh->prepare("INSERT INTO Kontaktformular (name, `alter`, instrumente, musikrichtungen, disziplin, musikbegleitung, dateiname, `e-mail`, telefon, kontaktzeiten, motivation, anmerkungen, woher, datenschutz) VALUES (:name, :alter, :instrumente, :musikrichtungen, :disziplin, :musikbegleitung, :dateiname, :email, :telefon, :kontaktzeiten, :motivation, :anmerkungen, :woher, :datenschutz)"); 
     $sth->bindParam(':name', $_POST['name']);
     $sth->bindParam(':alter', $_POST['alter']);
     $sth->bindParam(':instrumente', $_POST['instrumente']);
@@ -18,6 +18,7 @@ if(!empty($_POST)) {
     $sth->bindParam(':anmerkungen', $_POST['anmerkungen']);
     $sth->bindParam(':woher', $_POST['woher']);
     $sth->bindParam(':datenschutz', $_POST['datenschutz']);
+    $sth->bindParam(':dateiname', $_POST['dateiname']);
 
     if(!$sth->execute()) {
       $execErr = "Fehler beim Speichern der Daten";
@@ -51,12 +52,15 @@ if(!empty($_POST)) {
             integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
         <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     </head>
     <body>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="/"
+            <a class="navbar-brand" href="/"
                 ><img src="assets/logo.png" alt="logo" class="logo" /><span class="logo-text">Fünf Minuten</span></a
             >
             <div class="navbar-header">
@@ -106,11 +110,11 @@ if(!empty($_POST)) {
             <div class="overlay"></div>
             <div class="hero-text">
                 <div>
-                    <h1>Fünf Minuten</h1>
-                    <h4>Die kürzesten Straßenkünstler-Aktionen Deutschlands</h4>
+                    <h1 class="hero-title">Fünf Minuten</h1>
+                    <h4 class="hero-subtitle">Die kürzesten Straßenkünstler-Aktionen Deutschlands</h4>
                 </div>
             </div>
-            <img src="assets/header1.png" class="img-fluid" id="hero" alt="header" />
+            <div id="hero"></div>
         </header>
         <main>
             <section id="ueber">
@@ -145,6 +149,24 @@ if(!empty($_POST)) {
                             Das Drehteam von fünf Minuten ist ab jetzt für euch bereit. Wir helfen euch, Spaß zu
                             verbreiten! :D
                         </p>
+                        <div class="social-icons">
+                            <a
+                                href="https://www.facebook.com/fuenfminuteneu"
+                                target="_blank"
+                                class="fa fa-facebook mr-3"
+                            ></a>
+                            <a
+                                href="https://www.instagram.com/fuenfminuteneu/"
+                                target="_blank"
+                                class="fa fa-instagram mr-3"
+                            ></a>
+                            <a href="https://twitter.com/fuenfminuteneu" target="_blank" class="fa fa-twitter mr-3"></a>
+                            <a
+                                href="https://www.youtube.com/channel/UC-PGCE6J0Uy8f97_ZcBWKRg"
+                                target="_blank"
+                                class="fa fa-youtube"
+                            ></a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -187,18 +209,42 @@ if(!empty($_POST)) {
                                 </div>
                                 <div class="col-sm form-group">
                                     <label>Folgende Musikrichtungen:</label>
-                                    <input name="musikrichtungen" class="form-control" type="text" />
+                                    <input
+                                        name="musikrichtungen"
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="Jazz, Country, .."
+                                    />
                                 </div>
                             </div>
                             <div class="row form-row">
                                 <div class="col-sm form-group">
                                     <span>Ich stelle Folgendes dar:</span>
-                                    <input name="disziplin" class="form-control" type="text" />
+                                    <input
+                                        name="disziplin"
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="Tanz, Akrobatik, Capoeira, .."
+                                    />
                                 </div>
                                 <div class="col-sm form-group">
                                     <span>Zu folgender Musik:</span>
-                                    <input name="musikbegleitung" class="form-control" type="text" />
+                                    <input
+                                        name="musikbegleitung"
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="Klassik, Rock, .."
+                                    />
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <span>Du hast bereits ein Video gedreht? Dann lade es unter diesem Formular hoch & trage hier den Dateinamen ein, damit wir deine Daten zuordnen können.</span>
+                                <input
+                                    name="dateiname"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="namen-tanzen.mp4"
+                                />
                             </div>
                             <span>Wie können wir dich kontaktieren?</span>
                             <div class="row form-row">
@@ -209,15 +255,21 @@ if(!empty($_POST)) {
                                         class="form-control"
                                         type="email"
                                         placeholder="name@example.de"
+                                        required="required"
                                     />
                                 </div>
                                 <div class="col-sm form-group">
                                     <span>Telefon:</span>
-                                    <input name="telefon" class="form-control" type="text" />
+                                    <input name="telefon" class="form-control" type="text" placeholder="000-000000" />
                                 </div>
                                 <div class="col-sm form-group">
                                     <span>Bevorzugte Kontaktzeiten:</span>
-                                    <input name="kontaktzeiten" class="form-control" type="text" />
+                                    <input
+                                        name="kontaktzeiten"
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="Wochentags nach 16:00"
+                                    />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -251,8 +303,23 @@ if(!empty($_POST)) {
                                     <a href="/datenschutz.html" target="_blank">Datenschutzerklärung</a>.
                                 </label>
                             </div>
-                            <input type="submit" class="btn btn-primary" value="Absenden" class="submit" />
+                            <div class="button-center">
+                                <input type="submit" class="btn btn-primary" value="Daten senden" class="submit" />
+                            </div>
                         </form>
+                        <br />
+                        <p>
+                            Du hast bereits ein Video gedreht? Dann lade es hier hoch und wir sorgen dafür, dass es an
+                            öffentlichen Orten gezeigt wird :)
+                        </p>
+                        <div class="button-center">
+                            <a
+                                href="http://173.249.45.130/nextcloud/index.php/s/SBEToNjiDtZzi98"
+                                class="upload-button"
+                                target="_blank"
+                                ><button type="button" class="btn btn-primary">Video hochladen</button></a
+                            >
+                        </div>
                     </div>
                 </div>
             </section>
@@ -318,7 +385,11 @@ if(!empty($_POST)) {
                             class="fa fa-instagram mr-3"
                         ></a>
                         <a href="https://twitter.com/fuenfminuteneu" target="_blank" class="fa fa-twitter mr-3"></a>
-                        <a href="https://www.youtube.com/channel/UC-PGCE6J0Uy8f97_ZcBWKRg" target="_blank" class="fa fa-youtube"></a>
+                        <a
+                            href="https://www.youtube.com/channel/UC-PGCE6J0Uy8f97_ZcBWKRg"
+                            target="_blank"
+                            class="fa fa-youtube"
+                        ></a>
                     </div>
                     <div class="col-sm">
                         <p class="m-0 text-right text-white">&copy; Fünf Minuten 2019</p>
