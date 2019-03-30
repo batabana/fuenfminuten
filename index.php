@@ -116,7 +116,7 @@ if(!empty($_POST)) {
             </div>
             <div id="hero"></div>
         </header>
-        <main>
+        <main class="landing">
             <section id="ueber">
                 <div class="container">
                     <div class="col-lg-8 mx-auto">

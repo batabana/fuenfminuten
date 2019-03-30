@@ -17,8 +17,12 @@ button {
     font-size: 20px;
 }
 
-section {
+.landing section {
     padding: 80px 0;
+}
+
+.compliance section {
+    padding-top: 80px;
 }
 
 header {
@@ -121,10 +125,6 @@ header {
 
 .logo-chemnitz {
     width: 300px;
-}
-
-.impressum {
-    background: #b5cfd8;
 }
 
 .fa {
