@@ -100,7 +100,7 @@ if(!empty($_POST)) {
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="impressum.html">
-                            Impressum
+                            Impressum & Datenschutz
                         </a>
                     </li>
                 </ul>
@@ -146,7 +146,7 @@ if(!empty($_POST)) {
                             und wertzuschätzen. Und auch zeigen, wie wir wirklich sind - die Menschen, die hier leben!
                         </p>
                         <p>
-                            Das Drehteam von fünf Minuten ist ab jetzt für euch bereit. Wir helfen euch, Spaß zu
+                            Das Drehteam von fünf Minuten ist ab jetzt für dich bereit. Wir helfen dir, Spaß zu
                             verbreiten! :D
                         </p>
                         <div class="social-icons">
@@ -186,7 +186,7 @@ if(!empty($_POST)) {
                             <h2>Sag’ uns, wie wir dich in Szene setzen können</h2>
                             <div class="row form-row">
                                 <div class="col-sm form-group">
-                                    <label>Ich heiße:</label>
+                                    <label>Name:</label>
                                     <input name="name" class="form-control" type="text" placeholder="Name" />
                                 </div>
                                 <div class="col-sm form-group">
@@ -300,7 +300,7 @@ if(!empty($_POST)) {
                                 />
                                 <label class="form-check-label">
                                     Ich akzeptiere die
-                                    <a href="/datenschutz.html" target="_blank">Datenschutzerklärung</a>.
+                                    <a href="/impressum.html" target="_blank">Datenschutzerklärung</a>.
                                 </label>
                             </div>
                             <div class="button-center">
@@ -333,7 +333,7 @@ if(!empty($_POST)) {
                         </p>
                         <p class="text-center"><a href="mailto:info@fuenfminuten.eu">info@fuenfminuten.eu</a></p>
                         <p>
-                            Das 5min-Team wünscht euch einen harmonischen Tag. :)
+                            Das 5min-Team wünscht dir einen harmonischen Tag. :)
                         </p>
                         <p>
                             Dieses Projekt wird gefördert von der Stadt Chemnitz.
@@ -345,13 +345,14 @@ if(!empty($_POST)) {
             <section id="faq">
                 <div class="container">
                     <div class="col-lg-8 mx-auto">
-                        <h4>Darf ich auch teilnehmen, wenn ich kein Chemnitzer bin?</h4>
+                        <h2>Fragen & Antworten</h2>
+                        <h3>Darf ich auch teilnehmen, wenn ich kein Chemnitzer bin?</h3>
                         <p>
                             Das ist ein Projekt für alle, die Lust auf’s Tanzen und Musizieren haben. Teilnehmen dürfen
                             alle Menschen, die sich im Raum Chemnitz** bewegen. Du musst kein Chemnitzer sein, um mit
                             uns zusammen Spaß zu verbreiten! ;)
                         </p>
-                        <h4>Muss ich nach Chemnitz kommen, um aufzutreten?</h4>
+                        <h3>Muss ich nach Chemnitz kommen, um aufzutreten?</h3>
                         <p>
                             Nicht unbedingt. Folgende Kooperationsstädte sind auch dabei. Teile uns deinen gewünschten
                             Ort in einer dieser Städte mit und wir helfen dir, dort deinen Auftritt zu machen:
@@ -361,6 +362,67 @@ if(!empty($_POST)) {
                             Frankenberg, Hainichen, Jahnsdorf/Erzgebirge, Lichtenau, Limbach-Oberfrohna, Lößnitz,
                             Mittweida, Neukirchen/Erzgebirge, Niederdorf, Niederwiesa, Niederwürschnitz, Oelsnitz,
                             Olbernhau, Pockau-Lengefeld, Stollberg/Erzgebirge, Thalheim/Erzgebirge, Zwönitz
+                        </p>
+                        <h3>Ich möchte alleine auftreten, kann ich auch mitmachen?</h3>
+                        <p>
+                            Klar! Wir freuen uns auf jede Performance. Schick uns dein Video, melde dich an und lass uns
+                            von deinem Vorhaben erfahren. Wir helfen dir gerne.
+                        </p>
+                        <h3>
+                            Wir sind eine große Künstlergruppe. Müssen wir uns teilen, um uns an das Format von
+                            “fünf-Minuten” anzupassen?
+                        </h3>
+                        <p>
+                            Nicht unbedingt. (Siehe vorherige Antwort) Wir würden uns trotzdem auch freuen, wenn ihr
+                            zusätzlich ein Video mit einem Musiker und zwei Tänzern schickt. :) Je mehr Auftritte in der
+                            Stadt Chemnitz es gibt, desto bunter wird das Leben!
+                        </p>
+                        <h3>Wir haben keine Genehmigung fürs Musizieren/Performen, dürfen wir auftreten?</h3>
+                        <p>
+                            Ja, in der Stadt Chemnitz dürft ihr das zwischen 6:00 und 22:00, ohne die Straße abzusperren
+                            und andere zu stören. Die Passanten sollten ja z. B. nicht über euch springen müssen, wenn
+                            sie einkaufen gehen oder die U-Bahn nehmen möchten ;) Achtet außerdem darauf, nichts kaputt
+                            oder dreckig zu hinterlassen.
+                        </p>
+                        <p>
+                            Als “störend” gilt laut der
+                            <a href="https://www.chemnitz.de/chemnitz/media/rathaus/satzungen/32_100.pdf"
+                                >Chemnitzer Polizeiverordnung</a
+                            >
+                            folgendes:
+                            <br />
+                            § 3 Störendes Verhalten in der Öffentlichkeit (Auszug)
+                            <br />
+                            (1) Das unbefugte Benutzen, Beschriften, Besprühen, Bemalen, Bekleben, Verunreinigen sowie
+                            die Beeinträchtigung der Funktionalität oder des Gebrauchs öffentlicher Zwecke dienender
+                            Sachen, Einrichtungen, Anlagen ist untersagt. Hierzu gehören insbesondere auch die Störung
+                            von Betriebsabläufen, des Dienstbetriebes oder die Beeinträchtigung der Verkehrssicherheit.
+                            <br />
+                            (2) Jegliche Verunreinigung öffentlicher Straßen, Grün- und Erholungsanlagen sowie sonstiger
+                            öffentlich zugänglicher Flächen ist untersagt. Unzulässig ist grundsätzlich das Wegwerfen,
+                            Zurücklassen von Abfall, von Lebensmittelresten, Papier, Pappe, Kartonagen, Glas,
+                            Blechdosen, Kaugummi, Zigarettenkippen etc. [...]
+                        </p>
+                        <p>
+                            Bezüglich eurer Musik und anderer Geräusche gilt hauptsächlich folgender Satz:
+                            <br />
+                            § 8 Schutz vor Lärmbelästigung (Auszug)
+                            <br />
+                            (1) Rundfunk- und Fernsehgeräte, Lautsprecher, Tonwiedergabegeräte, Musikinstrumente sowie
+                            andere mechanische oder elektroakustische Geräte zur Lauterzeugung dürfen nur so benutzt
+                            werden, dass andere nicht unzumutbar belästigt werden. [...]
+                        </p>
+                        <p>
+                            Genauere Informationen könnt ihr
+                            <a href="https://www.chemnitz.de/chemnitz/media/rathaus/satzungen/32_100.pdf">hier</a>
+                            nachlesen. Alle Angaben ohne Gewähr.
+                        </p>
+                        <h3>Was ist das “fünf-Minuten-Filmfestival”? Wo kann man es sehen?</h3>
+                        <p>
+                            Wir wollen alle zusammen der Welt zeigen, wie wir, die Chemnitzer Bevölkerung, wirklich
+                            sind. Dafür sind eure Videos da, sie werden an verschiedenen Orten der Stadt und in den
+                            sozialen Medien veröffentlicht. Schaut euch unsere Social Media-Kanäle und unsere Website
+                            an. Ihr könnt auch unseren Newsletter abonnieren, um auf dem Laufenden gehalten zu werden.
                         </p>
                         <!-- <p>
                             * Mit allen Personenbeschreibungen sprechen wir jedes Geschlecht an, verwenden in Texten
