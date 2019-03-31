@@ -124,8 +124,9 @@ if(!empty($_POST)) {
                         <h2>Das Konzept</h2>
                         <p>
                             <span class="font-weight-bolder">Ein Musiker**, zwei Tänzer**, eine Kamera und Chemnitz.</span>
-                            Wir schaffen dir 5 Minuten Raum für deinen freien Auftritt mit Livemusik*** und Tanz vor einer
-                            Kamera. Eine Aufzeichnung, ohne Publikum zu erwarten, ohne Ankündigung. Wir überraschen Chemnitz!
+                            Wir schaffen dir 5 Minuten Raum für <span class="font-weight-bolder">deinen freien Auftritt</span>
+                            mit Livemusik*** und Tanz vor einer Kamera. Eine Aufzeichnung, ohne Publikum zu erwarten,
+                            ohne Ankündigung. Wir überraschen Chemnitz!
 
                             Im nächsten Schritt präsentieren wir dein Video im Rahmen des “fünf-Minuten-Filmfestivals”, um
                             die Stadt aus einer anderen Perspektive zu zeigen. Wir wollen damit die Straßenkunst für alle
@@ -144,7 +145,7 @@ if(!empty($_POST)) {
                         <h2>Deine Teilnahme</h2>
                         <p>
                           Kurz zusammengefasst: im öffentlichen Raum auftreten, ein Video im Querformat davon (Dauer max. 5 min)
-                          aufnehmen und es uns zukommen lassen (trage dich hier ein und lade das Video hoch). Es gibt zwei Varianten
+                          aufnehmen und es uns zukommen lassen (trage dich <a href="https://fuenfminuten.eu/#anmeldung">hier</a> ein und lade das Video hoch). Es gibt zwei Varianten
                           für die Teilnahme:
 
                           <li>Variante A „das selbstständige Ensemble“: Die Künstlergruppe für das „fünf-Minuten-Video“ (also
@@ -153,7 +154,7 @@ if(!empty($_POST)) {
                             Dann tragt euch in unsere Künstler-Börse ein (siehe Künstleranmeldung) und das Team von „fünf Minuten“
                             wird euch euer gewünschtes Ensemble und einen Auftrittsort mitteilen.</li>
 
-                          Brauchst du Unterstützung, z. B. bei der Aufnahme oder Zusendung des Videos, setze dich mit uns in Kontakt. ;)
+                          Brauchst du Unterstützung, z. B. bei der Aufnahme oder Zusendung des Videos, setze dich mit uns in <a href="https://fuenfminuten.eu/#kontakt">Kontakt</a>. ;)
                           Wir sind auch in der Lage, einen Termin für den Dreh mitzuorganisieren.
                         </p>
                         <h2>Unser Auftrag</h2>
@@ -166,12 +167,12 @@ if(!empty($_POST)) {
 
                           Das Team von fünf Minuten ist ab jetzt für euch bereit. Wir helfen euch, Spaß zu verbreiten! :D
                         </p>
-                        <p>
+                        <p class="small">
                           *Kooperations-Ortschaften, die sich am Chemnitzer Modell und somit auch an diesem Projekt beteiligen:
                           Amtsberg, Annaberg-Buchholz, Aue, Augustusburg, Burgstädt, Burkhardtsdorf, Flöha, Frankenberg, Hainichen,
                           Jahnsdorf/Erzgebirge, Lichtenau, Limbach-Oberfrohna, Lößnitz, Mittweida, Neukirchen/Erzgebirge, Niederdorf,
                           Niederwiesa, Niederwürschnitz, Oelsnitz, Olbernhau, Pockau-Lengefeld, Stollberg/Erzgebirge, Thalheim/Erzgebirge,
-                          Zwönitz 
+                          Zwönitz
 
                           **Mit allen Personenbeschreibungen sprechen wir jedes Geschlecht an, verwenden in Texten aber die jeweils kürzeste
                           Variante. Unter Musik und Tanz werden Performer der auditiven bzw. der Bewegungskünste verstanden. Eine genauere
