@@ -4,7 +4,7 @@ if(!empty($_POST)) {
   try {
     $dbh = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sth = $dbh->prepare("INSERT INTO Kontaktformular (name, `alter`, instrumente, musikrichtungen, disziplin, musikbegleitung, dateiname, `e-mail`, telefon, kontaktzeiten, motivation, anmerkungen, woher, datenschutz) VALUES (:name, :alter, :instrumente, :musikrichtungen, :disziplin, :musikbegleitung, :dateiname, :email, :telefon, :kontaktzeiten, :motivation, :anmerkungen, :woher, :datenschutz)"); 
+    $sth = $dbh->prepare("INSERT INTO Kontaktformular (name, `alter`, instrumente, musikrichtungen, disziplin, musikbegleitung, dateiname, `e-mail`, telefon, kontaktzeiten, motivation, anmerkungen, woher, datenschutz) VALUES (:name, :alter, :instrumente, :musikrichtungen, :disziplin, :musikbegleitung, :dateiname, :email, :telefon, :kontaktzeiten, :motivation, :anmerkungen, :woher, :datenschutz)");
     $sth->bindParam(':name', $_POST['name']);
     $sth->bindParam(':alter', $_POST['alter']);
     $sth->bindParam(':instrumente', $_POST['instrumente']);
@@ -108,12 +108,7 @@ if(!empty($_POST)) {
         </nav>
         <header id="start">
             <div class="overlay"></div>
-            <div class="hero-text">
-                <div>
-                    <h1 class="hero-title">Fünf Minuten</h1>
-                    <h4 class="hero-subtitle">Die kürzesten Straßenkünstler-Aktionen Deutschlands</h4>
-                </div>
-            </div>
+            <div class="hero-text"></div>
             <div id="hero"></div>
         </header>
         <main class="landing">
@@ -122,15 +117,21 @@ if(!empty($_POST)) {
                     <div class="col-lg-8 mx-auto">
                         <p>
                             <span class="font-weight-bolder">Fünf Minuten</span>, das Kulturprojekt FÜR ALLE, die Lust
-                            auf’s Tanzen und Musik-Spielen haben. Wir sind da, um die Straßenkünstler-Szene in der Stadt
-                            und ihrer Umgebung anzusiedeln.
+                            haben, ihre Freude am Tanzen und Musizieren zu zeigen.
+
+                            Unser Ziel ist es, die Straßenkünstlerszene in Chemnitz* anzusiedeln!
                         </p>
+                        <h2>Das Konzept</h2>
                         <p>
-                            Du wählst einen Ort aus und da treten wir maximal 5 Minuten mit Livemusik und Tanz vor einer
-                            Kamera auf. Ohne ein Publikum zu erwarten, ohne Ankündigung, nur für uns.
-                            <span class="font-weight-bolder"
-                                >Ein Musiker*, zwei Tänzer*, eine Kamera und Chemnitz.</span
-                            >
+                            <span class="font-weight-bolder">Ein Musiker**, zwei Tänzer**, eine Kamera und Chemnitz.</span>
+                            Wir schaffen dir 5 Minuten Raum für deinen freien Auftritt mit Livemusik*** und Tanz vor einer
+                            Kamera. Eine Aufzeichnung, ohne Publikum zu erwarten, ohne Ankündigung. Wir überraschen Chemnitz!
+
+                            Im nächsten Schritt präsentieren wir dein Video im Rahmen des “fünf-Minuten-Filmfestivals”, um
+                            die Stadt aus einer anderen Perspektive zu zeigen. Wir wollen damit die Straßenkunst für alle
+                            zugänglich machen und den Alltag und die schönen Ecken von Chemnitz mit Emotionen, Kunst und
+                            Lebenskultur harmonisieren. Dabei trägst du deinen bunten Beitrag zur Bewerbung zur Kulturhauptstadt
+                            Europas 2025!
                         </p>
                         <blockquote class="blockquote text-center">
                             <p class="mb-0">
@@ -140,14 +141,44 @@ if(!empty($_POST)) {
                                 <cite title="Source Title">Sokrates</cite>
                             </footer>
                         </blockquote>
+                        <h2>Deine Teilnahme</h2>
                         <p>
-                            Dadurch wollen wir auch der Welt zeigen, dass die Entscheidung in der Hand jedes Menschen
-                            liegt, das Alltagsleben etwas zu verbessern und den Ort, an dem wir leben, neu zu entdecken
-                            und wertzuschätzen. Und auch zeigen, wie wir wirklich sind - die Menschen, die hier leben!
+                          Kurz zusammengefasst: im öffentlichen Raum auftreten, ein Video im Querformat davon (Dauer max. 5 min)
+                          aufnehmen und es uns zukommen lassen (trage dich hier ein und lade das Video hoch). Es gibt zwei Varianten
+                          für die Teilnahme:
+
+                          <li>Variante A „das selbstständige Ensemble“: Die Künstlergruppe für das „fünf-Minuten-Video“ (also
+                            Musiker und Tänzer) ist von euch selbst schon gebildet.</li>
+                          <li>Variante B „die Künstler-Börse“: Ihr wollt performen, euch fehlt aber der passende Tänzer oder Musiker?
+                            Dann tragt euch in unsere Künstler-Börse ein (siehe Künstleranmeldung) und das Team von „fünf Minuten“
+                            wird euch euer gewünschtes Ensemble und einen Auftrittsort mitteilen.</li>
+
+                          Brauchst du Unterstützung, z. B. bei der Aufnahme oder Zusendung des Videos, setze dich mit uns in Kontakt. ;)
+                          Wir sind auch in der Lage, einen Termin für den Dreh mitzuorganisieren.
+                        </p>
+                        <h2>Unser Auftrag</h2>
+                        <p>
+                          Wir wollen der Welt zeigen, dass wir mit wenig Zeit unseren Alltag selbst in die Hand nehmen und ihn jeden
+                          Tag bunter gestalten können. Wir können die Orte, an denen wir leben, wieder neu entdecken und wertschätzen
+                          lernen!
+
+                          Fünf Minuten... die zeigen, wer wir wirklich sind und sein können!
+
+                          Das Team von fünf Minuten ist ab jetzt für euch bereit. Wir helfen euch, Spaß zu verbreiten! :D
                         </p>
                         <p>
-                            Das Drehteam von fünf Minuten ist ab jetzt für dich bereit. Wir helfen dir, Spaß zu
-                            verbreiten! :D
+                          *Kooperations-Ortschaften, die sich am Chemnitzer Modell und somit auch an diesem Projekt beteiligen:
+                          Amtsberg, Annaberg-Buchholz, Aue, Augustusburg, Burgstädt, Burkhardtsdorf, Flöha, Frankenberg, Hainichen,
+                          Jahnsdorf/Erzgebirge, Lichtenau, Limbach-Oberfrohna, Lößnitz, Mittweida, Neukirchen/Erzgebirge, Niederdorf,
+                          Niederwiesa, Niederwürschnitz, Oelsnitz, Olbernhau, Pockau-Lengefeld, Stollberg/Erzgebirge, Thalheim/Erzgebirge,
+                          Zwönitz 
+
+                          **Mit allen Personenbeschreibungen sprechen wir jedes Geschlecht an, verwenden in Texten aber die jeweils kürzeste
+                          Variante. Unter Musik und Tanz werden Performer der auditiven bzw. der Bewegungskünste verstanden. Eine genauere
+                          Trennung der Darstellungsformen muss nicht erfolgen, zu beachten ist nur, dass Darstellende Künste in der Performance
+                          zu hören und zu sehen sind.
+
+                          ***Improvisiertes Musikstück, ein Public-Domain-Lied, bzw. befreit von GEMA-Gebühren
                         </p>
                         <div class="social-icons">
                             <a
@@ -172,7 +203,7 @@ if(!empty($_POST)) {
             </section>
             <section id="anmeldung">
                 <div class="container">
-                    <?php 
+                    <?php
                         if ($success) {
                             echo "<div class='alert alert-success col-lg-8 mx-auto' role='alert'>Daten erfolgreich übermittelt</div>";
                         } else if (isset($execErr)) {
