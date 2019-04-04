@@ -4,4 +4,4 @@ Built this website for friends who participate with their microproject in Chemni
 
 Very simple website with a contact form that saves data into a MariaDB database. Used PHP as it was a requirement of the web hosting service.
 
-Find the live website running under https://fuenfminuten.eu/ -- currently password-protected to make sure all legal requirements are met before going live.
+Find the live website running under https://fuenfminuten.eu/ 
