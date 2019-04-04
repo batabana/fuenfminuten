@@ -4,9 +4,9 @@ if(!empty($_POST)) {
   try {
     $dbh = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sth = $dbh->prepare("INSERT INTO Kontaktformular (name, `alter`, instrumente, musikrichtungen, disziplin, musikbegleitung, dateiname, `e-mail`, telefon, kontaktzeiten, motivation, anmerkungen, woher, datenschutz) VALUES (:name, :alter, :instrumente, :musikrichtungen, :disziplin, :musikbegleitung, :dateiname, :email, :telefon, :kontaktzeiten, :motivation, :anmerkungen, :woher, :datenschutz)");
+    $sth = $dbh->prepare("INSERT INTO Kontaktformular (name, `geburtsdatum`, instrumente, musikrichtungen, disziplin, musikbegleitung, dateiname, `e-mail`, telefon, kontaktzeiten, motivation, anmerkungen, woher, datenschutz) VALUES (:name, :geburtsdatum, :instrumente, :musikrichtungen, :disziplin, :musikbegleitung, :dateiname, :email, :telefon, :kontaktzeiten, :motivation, :anmerkungen, :woher, :datenschutz)");
     $sth->bindParam(':name', $_POST['name']);
-    $sth->bindParam(':alter', $_POST['alter']);
+    $sth->bindParam(':geburtsdatum', $_POST['geburtsdatum']);
     $sth->bindParam(':instrumente', $_POST['instrumente']);
     $sth->bindParam(':musikrichtungen', $_POST['musikrichtungen']);
     $sth->bindParam(':disziplin', $_POST['disziplin']);
@@ -99,7 +99,12 @@ if(!empty($_POST)) {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="impressum.html">
+                        <a class="nav-link" href="#bilder">
+                            Bilder
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/impressum.html">
                             Impressum & Datenschutz
                         </a>
                     </li>
@@ -109,12 +114,19 @@ if(!empty($_POST)) {
         <header id="start">
             <div class="overlay"></div>
             <div class="hero-text"></div>
-            <div id="hero"></div>
+            <div id="hero">
+              <!--iframe id="myVideo" align="center" src="https://www.youtube-nocookie.com/embed/c55IJPmZmew"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
+            </div>
+
+            </div>
+
         </header>
         <main class="landing">
             <section id="ueber">
                 <div class="container">
                     <div class="col-lg-8 mx-auto">
+                        <h2>Die kürzesten Straßenkünstler-Aktionen Deutschlands</h2>
                         <p>
                             <span class="font-weight-bolder">Fünf Minuten</span>, das Kulturprojekt FÜR ALLE, die Lust
                             haben, ihre Freude am Tanzen und Musizieren zu zeigen.
@@ -131,12 +143,12 @@ if(!empty($_POST)) {
                             Im nächsten Schritt präsentieren wir dein Video im Rahmen des “fünf-Minuten-Filmfestivals”, um
                             die Stadt aus einer anderen Perspektive zu zeigen. Wir wollen damit die Straßenkunst für alle
                             zugänglich machen und den Alltag und die schönen Ecken von Chemnitz mit Emotionen, Kunst und
-                            Lebenskultur harmonisieren. Dabei trägst du deinen bunten Beitrag zur Bewerbung zur Kulturhauptstadt
+                            Lebenskultur harmonisieren. Dabei trägst du deinen bunten Beitrag zur Bewerbung als Kulturhauptstadt
                             Europas 2025!
                         </p>
                         <blockquote class="blockquote text-center">
                             <p class="mb-0">
-                                "Das Gute Gelingen ist zwar nichts Kleines, aber es fängt mit Kleinigkeiten an."
+                                <i>"Das Gute Gelingen ist zwar nichts Kleines, aber es fängt mit Kleinigkeiten an."</i>
                             </p>
                             <footer class="blockquote-footer">
                                 <cite title="Source Title">Sokrates</cite>
@@ -145,17 +157,19 @@ if(!empty($_POST)) {
                         <h2>Deine Teilnahme</h2>
                         <p>
                           Kurz zusammengefasst: im öffentlichen Raum auftreten, ein Video im Querformat davon (Dauer max. 5 min)
-                          aufnehmen und es uns zukommen lassen (trage dich <a href="https://fuenfminuten.eu/#anmeldung">hier</a> ein und lade das Video hoch). Es gibt zwei Varianten
+                          aufnehmen und es uns zukommen lassen (trage dich <a href="#anmeldung">hier</a> ein und lade das Video hoch). Es gibt zwei Varianten
                           für die Teilnahme:
 
-                          <li>Variante A „das selbstständige Ensemble“: Die Künstlergruppe für das „fünf-Minuten-Video“ (also
-                            Musiker und Tänzer) ist von euch selbst schon gebildet.</li>
-                          <li>Variante B „die Künstler-Börse“: Ihr wollt performen, euch fehlt aber der passende Tänzer oder Musiker?
-                            Dann tragt euch in unsere Künstler-Börse ein (siehe Künstleranmeldung) und das Team von „fünf Minuten“
-                            wird euch euer gewünschtes Ensemble und einen Auftrittsort mitteilen.</li>
+                            <li>Variante A „das selbstständige Ensemble“: Die Künstlergruppe für das „fünf-Minuten-Video“ (also
+                              Musiker und Tänzer) ist von euch selbst schon gebildet.</li>
+                            <li>Variante B „die Künstler-Börse“: Ihr wollt performen, euch fehlt aber der passende Tänzer oder Musiker?
+                              Dann tragt euch in unsere Künstler-Börse ein (siehe <a href="#anmeldung">Künstleranmeldung</a>) und das Team von „fünf Minuten“
+                              wird euch euer gewünschtes Ensemble und einen Auftrittsort mitteilen.</li>
 
-                          Brauchst du Unterstützung, z. B. bei der Aufnahme oder Zusendung des Videos, setze dich mit uns in <a href="https://fuenfminuten.eu/#kontakt">Kontakt</a>. ;)
-                          Wir sind auch in der Lage, einen Termin für den Dreh mitzuorganisieren.
+                          Brauchst du Unterstützung, z. B. bei der Aufnahme oder Zusendung des Videos, setze dich mit uns in <a href="#kontakt">Kontakt</a>.
+                          <br/><br/>
+                          Werde Teil unserer Aktion, wir wollen zusammen die Straßenkunstszene revolutionieren!<br/>
+                          <img src="assets/bild5klein.jpg" alt="bild" class="bild" />
                         </p>
                         <h2>Unser Auftrag</h2>
                         <p>
@@ -172,32 +186,34 @@ if(!empty($_POST)) {
                           Amtsberg, Annaberg-Buchholz, Aue, Augustusburg, Burgstädt, Burkhardtsdorf, Flöha, Frankenberg, Hainichen,
                           Jahnsdorf/Erzgebirge, Lichtenau, Limbach-Oberfrohna, Lößnitz, Mittweida, Neukirchen/Erzgebirge, Niederdorf,
                           Niederwiesa, Niederwürschnitz, Oelsnitz, Olbernhau, Pockau-Lengefeld, Stollberg/Erzgebirge, Thalheim/Erzgebirge,
-                          Zwönitz
+                          Zwönitz.<br/>
 
                           **Mit allen Personenbeschreibungen sprechen wir jedes Geschlecht an, verwenden in Texten aber die jeweils kürzeste
                           Variante. Unter Musik und Tanz werden Performer der auditiven bzw. der Bewegungskünste verstanden. Eine genauere
                           Trennung der Darstellungsformen muss nicht erfolgen, zu beachten ist nur, dass Darstellende Künste in der Performance
-                          zu hören und zu sehen sind.
+                          zu hören und zu sehen sind.<br/>
 
-                          ***Improvisiertes Musikstück, ein Public-Domain-Lied, bzw. befreit von GEMA-Gebühren
+                          ***Improvisiertes Musikstück, ein Public-Domain-Lied, bzw. befreit von GEMA-Gebühren.
                         </p>
                         <div class="social-icons">
                             <a
                                 href="https://www.facebook.com/fuenfminuteneu"
                                 target="_blank"
-                                class="fa fa-facebook mr-3"
-                            ></a>
+                            ><img src="assets/fb_logo2.png" alt="logo" class="logo" /></a>
                             <a
                                 href="https://www.instagram.com/fuenfminuteneu/"
                                 target="_blank"
-                                class="fa fa-instagram mr-3"
-                            ></a>
-                            <a href="https://twitter.com/fuenfminuteneu" target="_blank" class="fa fa-twitter mr-3"></a>
+                            ><img src="assets/insta_logo2.png" alt="logo" class="logo" /></a>
+                            <a
+                               href="https://twitter.com/fuenfminuteneu"
+                               target="_blank"
+                            ><img src="assets/twitter_logo2.png" alt="logo" class="logo" />
+                            </a>
                             <a
                                 href="https://www.youtube.com/channel/UC-PGCE6J0Uy8f97_ZcBWKRg"
                                 target="_blank"
-                                class="fa fa-youtube"
-                            ></a>
+                            ><img src="assets/youtube_logo2.png" alt="logo" class="logo" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -218,20 +234,15 @@ if(!empty($_POST)) {
                             <h2>Sag’ uns, wie wir dich in Szene setzen können</h2>
                             <div class="row form-row">
                                 <div class="col-sm form-group">
-                                    <label>Name:</label>
-                                    <input name="name" class="form-control" type="text" placeholder="Name" />
+                                    <input name="name" class="form-control" type="text" placeholder="Vor- und Nachname" />
                                 </div>
                                 <div class="col-sm form-group">
-                                    <label>Alter:</label>
-                                    <input name="alter" class="form-control" type="text" placeholder="Alter" />
-                                    <!-- <small class="form-text text-muted">
-                                Geburtsdatum bei Minderjährigen, sonst reicht das Jahr
-                            </small> -->
+                                    <input name="geburtsdatum" class="form-control" type="text" placeholder="Geburtsdatum" />
                                 </div>
                             </div>
                             <div class="row form-row">
                                 <div class="col-sm form-group">
-                                    <label>Ich spiele mit folgenden Instrumenten:</label>
+                                    <label class="lb-md">Ich spiele mit folgenden Instrumenten:</label>
                                     <input
                                         name="instrumente"
                                         class="form-control"
@@ -240,7 +251,7 @@ if(!empty($_POST)) {
                                     />
                                 </div>
                                 <div class="col-sm form-group">
-                                    <label>Folgende Musikrichtungen:</label>
+                                    <label class="lb-md">Folgende Musikrichtungen:</label>
                                     <input
                                         name="musikrichtungen"
                                         class="form-control"
@@ -251,16 +262,16 @@ if(!empty($_POST)) {
                             </div>
                             <div class="row form-row">
                                 <div class="col-sm form-group">
-                                    <span>Ich stelle Folgendes dar:</span>
+                                    <label class="lb-md">Ich stelle Folgendes dar:</label>
                                     <input
                                         name="disziplin"
                                         class="form-control"
                                         type="text"
-                                        placeholder="Tanz, Akrobatik, Capoeira, .."
+                                        placeholder="Salsa, Walzer, Akrobatik, Capoeira, .."
                                     />
                                 </div>
                                 <div class="col-sm form-group">
-                                    <span>Zu folgender Musik:</span>
+                                    <label class="lb-md">Zu folgender Musik:</label>
                                     <input
                                         name="musikbegleitung"
                                         class="form-control"
@@ -270,18 +281,18 @@ if(!empty($_POST)) {
                                 </div>
                             </div>
                             <div class="form-group">
-                                <span>Du hast bereits ein Video gedreht? Dann lade es unter diesem Formular hoch & trage hier den Dateinamen ein, damit wir deine Daten zuordnen können.</span>
+                                <label class="lb-md">Du hast bereits ein Video gedreht? Dann lade es unter diesem Formular hoch & trage hier den Dateinamen ein, damit wir deine Daten zuordnen können.</label>
                                 <input
                                     name="dateiname"
                                     type="text"
                                     class="form-control"
-                                    placeholder="namen-tanzen.mp4"
+                                    placeholder="name_deines_videos.mp4"
                                 />
                             </div>
-                            <span>Wie können wir dich kontaktieren?</span>
+                            <label class="lb-md">Wie können wir dich kontaktieren?</label>
                             <div class="row form-row">
                                 <div class="col-sm form-group">
-                                    <span>E-Mail:</span>
+                                    <label class="lb-md">E-Mail (Pflichtfeld):</label>
                                     <input
                                         name="email"
                                         class="form-control"
@@ -291,11 +302,11 @@ if(!empty($_POST)) {
                                     />
                                 </div>
                                 <div class="col-sm form-group">
-                                    <span>Telefon:</span>
+                                    <label class="lb-md">Telefon:</label>
                                     <input name="telefon" class="form-control" type="text" placeholder="000-000000" />
                                 </div>
                                 <div class="col-sm form-group">
-                                    <span>Bevorzugte Kontaktzeiten:</span>
+                                    <label class="lb-md">Bevorzugte Kontaktzeiten:</label>
                                     <input
                                         name="kontaktzeiten"
                                         class="form-control"
@@ -305,17 +316,15 @@ if(!empty($_POST)) {
                                 </div>
                             </div>
                             <div class="form-group">
-                                <span
-                                    >Was bewegt dich, bei uns mitzumachen? Welche Wünsche erfüllt dir das Projekt?</span
-                                >
+                                <label class="lb-md">Was bewegt dich, bei uns mitzumachen? Welche Wünsche erfüllt dir das Projekt?</label>
                                 <textarea name="motivation" class="form-control"></textarea>
                             </div>
                             <div class="form-group">
-                                <span>Anmerkungen:</span>
+                                <label class="lb-md">Anmerkungen:</label>
                                 <textarea name="anmerkungen" class="form-control"></textarea>
                             </div>
                             <div class="form-group">
-                                <span>Wie bist du auf uns aufmerksam geworden?</span>
+                                <label class="lb-md">Wie bist du auf uns aufmerksam geworden?</label>
                                 <input
                                     name="woher"
                                     type="text"
@@ -332,7 +341,7 @@ if(!empty($_POST)) {
                                 />
                                 <label class="form-check-label">
                                     Ich akzeptiere die
-                                    <a href="/impressum.html" target="_blank">Datenschutzerklärung</a>.
+                                    <a href="/impressum.html" target="_blank">Datenschutzerklärung</a> (Pflichtfeld).
                                 </label>
                             </div>
                             <div class="button-center">
@@ -352,13 +361,34 @@ if(!empty($_POST)) {
                                 ><button type="button" class="btn btn-primary">Video hochladen</button></a
                             >
                         </div>
+                        <p>
+                          <br/>
+                          <div class="popup" onclick="myFunction()">Mit dem Hochladen eines Videos erklärst du dich mit der Nutzung der Aufnahmen
+                            einverstanden (für Details klicke hier).
+                           <span class="popuptext" id="popupAufnahmen"><b>Einverständniserklärung für Bild-, Ton- und Filmaufnahmen</b><br/><br/>
+                             Hiermit erkläre ich mich einverstanden, dass die von mir und/oder meinen Kindern gemachten Bild-,
+                             Ton- und Filmaufnahmen für Veröffentlichungen auf Webseiten und Social-Media-Kanälen sowie in
+                             anderen Publikationen des Kulturprojekts „Fünf Minuten“ unentgeltlich genutzt werden können.
+                             Das Kulturprojekt „Fünf Minuten“ ist damit zu einer zeitlich und örtlich uneingeschränkten und
+                             unbegrenzten Nutzung, Speicherung und Verwendung der Bilder berechtigt.<br/><br/>
+                             Sofern Fotos auf der Webseite veröffentlicht werden, ist technisch nicht auszuschließen, dass
+                             ein Bild aus einem sog. Screenshot isoliert wird. Im Falle eines Widerrufes der Einwilligung in
+                             eine Veröffentlichung kann „Fünf Minuten“ daher nicht ausschließen, dass das Bildnis des Betroffenen
+                             trotz Löschung des Fotos/Videos auf der „Fünf Minuten“-Webseite ggf. durch Dritte weiterverwendet
+                             wird. Dies gilt auch für Fotos, die wie oben beschrieben an Dritte weitergegeben wurden.<br/><br/>
+                             Eine Verwendung von Fotos und/oder Videos mit Minderjährigen im Alter bis einschließlich 17 Jahren
+                             bedarf der Zustimmung des gesetzlichen Vertreters. Darüber hinaus ist ab der Vollendung des
+                             14. Lebensjahres auch die Einwilligung des Minderjährigen selbst erforderlich.
+                           </span>
+                          </div>
+                        </p>
                     </div>
                 </div>
             </section>
             <section id="kontakt">
                 <div class="container">
                     <div class="col-lg-8 mx-auto">
-                        <p class="lead">
+                        <p>
                             Hast du Fragen, Anregungen, Kritik, Lob, Vorschläge, eine Socke verloren oder Lust, mit
                             jemandem zu lachen? Melde dich bei uns und mach’ dir keinen Kopf über die Formulierung der
                             E-Mail, wir freuen uns auch über ein einfaches “Hallo” :D
@@ -370,7 +400,7 @@ if(!empty($_POST)) {
                         <p>
                             Dieses Projekt wird gefördert von der Stadt Chemnitz.
                         </p>
-                        <img src="assets/khs2025.png" alt="logo-chemnitz" class="logo-chemnitz" />
+                        <img src="assets/chemnitz_kulturhauptstadt_logo7.png" alt="logo-chemnitz" class="logo-chemnitz" />
                     </div>
                 </div>
             </section>
@@ -389,7 +419,7 @@ if(!empty($_POST)) {
                             Nicht unbedingt. Folgende Kooperationsstädte sind auch dabei. Teile uns deinen gewünschten
                             Ort in einer dieser Städte mit und wir helfen dir, dort deinen Auftritt zu machen:
                         </p>
-                        <p>
+                        <p class="small">
                             **Amtsberg, Annaberg-Buchholz, Aue, Augustusburg, Burgstädt, Burkhardtsdorf, Flöha,
                             Frankenberg, Hainichen, Jahnsdorf/Erzgebirge, Lichtenau, Limbach-Oberfrohna, Lößnitz,
                             Mittweida, Neukirchen/Erzgebirge, Niederdorf, Niederwiesa, Niederwürschnitz, Oelsnitz,
@@ -407,7 +437,9 @@ if(!empty($_POST)) {
                         <p>
                             Nicht unbedingt. (Siehe vorherige Antwort) Wir würden uns trotzdem auch freuen, wenn ihr
                             zusätzlich ein Video mit einem Musiker und zwei Tänzern schickt. :) Je mehr Auftritte in der
-                            Stadt Chemnitz es gibt, desto bunter wird das Leben!
+                            Stadt Chemnitz es gibt, desto bunter wird das Leben!<br/>
+                            Achtet aber darauf, dass weder ihr noch eure Zuschauer den öffentlichen Raum für Passanten versperrt.
+                            Für Details schaut bitte <a href="https://www.chemnitz.de/chemnitz/media/rathaus/satzungen/32_100.pdf">hier</a>.
                         </p>
                         <h3>Wir haben keine Genehmigung fürs Musizieren/Performen, dürfen wir auftreten?</h3>
                         <p>
@@ -421,28 +453,32 @@ if(!empty($_POST)) {
                             <a href="https://www.chemnitz.de/chemnitz/media/rathaus/satzungen/32_100.pdf"
                                 >Chemnitzer Polizeiverordnung</a
                             >
-                            folgendes:
+                            folgendes (Auszug):
                             <br />
-                            § 3 Störendes Verhalten in der Öffentlichkeit (Auszug)
-                            <br />
-                            (1) Das unbefugte Benutzen, Beschriften, Besprühen, Bemalen, Bekleben, Verunreinigen sowie
-                            die Beeinträchtigung der Funktionalität oder des Gebrauchs öffentlicher Zwecke dienender
-                            Sachen, Einrichtungen, Anlagen ist untersagt. Hierzu gehören insbesondere auch die Störung
-                            von Betriebsabläufen, des Dienstbetriebes oder die Beeinträchtigung der Verkehrssicherheit.
-                            <br />
-                            (2) Jegliche Verunreinigung öffentlicher Straßen, Grün- und Erholungsanlagen sowie sonstiger
-                            öffentlich zugänglicher Flächen ist untersagt. Unzulässig ist grundsätzlich das Wegwerfen,
-                            Zurücklassen von Abfall, von Lebensmittelresten, Papier, Pappe, Kartonagen, Glas,
-                            Blechdosen, Kaugummi, Zigarettenkippen etc. [...]
+                            <p class="small">
+                              § 3 Störendes Verhalten in der Öffentlichkeit
+                              <br />
+                              (1) Das unbefugte Benutzen, Beschriften, Besprühen, Bemalen, Bekleben, Verunreinigen sowie
+                              die Beeinträchtigung der Funktionalität oder des Gebrauchs öffentlicher Zwecke dienender
+                              Sachen, Einrichtungen, Anlagen ist untersagt. Hierzu gehören insbesondere auch die Störung
+                              von Betriebsabläufen, des Dienstbetriebes oder die Beeinträchtigung der Verkehrssicherheit.
+                              <br />
+                              (2) Jegliche Verunreinigung öffentlicher Straßen, Grün- und Erholungsanlagen sowie sonstiger
+                              öffentlich zugänglicher Flächen ist untersagt. Unzulässig ist grundsätzlich das Wegwerfen,
+                              Zurücklassen von Abfall, von Lebensmittelresten, Papier, Pappe, Kartonagen, Glas,
+                              Blechdosen, Kaugummi, Zigarettenkippen etc. [...]
+                            </p>
                         </p>
                         <p>
-                            Bezüglich eurer Musik und anderer Geräusche gilt hauptsächlich folgender Satz:
+                            Bezüglich eurer Musik und anderer Geräusche gilt hauptsächlich folgender Satz (Auszug):
                             <br />
-                            § 8 Schutz vor Lärmbelästigung (Auszug)
-                            <br />
-                            (1) Rundfunk- und Fernsehgeräte, Lautsprecher, Tonwiedergabegeräte, Musikinstrumente sowie
-                            andere mechanische oder elektroakustische Geräte zur Lauterzeugung dürfen nur so benutzt
-                            werden, dass andere nicht unzumutbar belästigt werden. [...]
+                            <p class="small">
+                              § 8 Schutz vor Lärmbelästigung
+                              <br />
+                              (1) Rundfunk- und Fernsehgeräte, Lautsprecher, Tonwiedergabegeräte, Musikinstrumente sowie
+                              andere mechanische oder elektroakustische Geräte zur Lauterzeugung dürfen nur so benutzt
+                              werden, dass andere nicht unzumutbar belästigt werden. [...]
+                            </p>
                         </p>
                         <p>
                             Genauere Informationen könnt ihr
@@ -463,6 +499,16 @@ if(!empty($_POST)) {
                     </div>
                 </div>
             </section>
+            <section id="bilder">
+                <div class="container">
+                    <div class="col-lg-8 mx-auto">
+                      <img src="assets/bild1klein.png" alt="bild" class="bild" />
+                      <img src="assets/bild2klein.png" alt="bild" class="bild" />
+                      <img src="assets/bild3klein.png" alt="bild" class="bild" />
+                      <img src="assets/bild4klein.png" alt="bild" class="bild" />
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="py-4 bg-dark">
             <div class="container">
@@ -471,19 +517,21 @@ if(!empty($_POST)) {
                         <a
                             href="https://www.facebook.com/fuenfminuteneu"
                             target="_blank"
-                            class="fa fa-facebook mr-3"
-                        ></a>
+                        ><img src="assets/fb_logo2w.png" alt="logo" class="logo-small" /></a>
                         <a
                             href="https://www.instagram.com/fuenfminuteneu/"
                             target="_blank"
-                            class="fa fa-instagram mr-3"
-                        ></a>
-                        <a href="https://twitter.com/fuenfminuteneu" target="_blank" class="fa fa-twitter mr-3"></a>
+                        ><img src="assets/insta_logo2w.png" alt="logo" class="logo-small" /></a>
+                        <a
+                           href="https://twitter.com/fuenfminuteneu"
+                           target="_blank"
+                        ><img src="assets/twitter_logo2w.png" alt="logo" class="logo-small" />
+                        </a>
                         <a
                             href="https://www.youtube.com/channel/UC-PGCE6J0Uy8f97_ZcBWKRg"
                             target="_blank"
-                            class="fa fa-youtube"
-                        ></a>
+                        ><img src="assets/youtube_logo2w.png" alt="logo" class="logo-small" />
+                        </a>
                     </div>
                     <div class="col-sm">
                         <p class="m-0 text-right text-white">&copy; Fünf Minuten 2019</p>
@@ -502,5 +550,12 @@ if(!empty($_POST)) {
             crossorigin="anonymous"
         ></script>
         <script src="script.js"></script>
+        <script>
+          // When the user clicks on <div>, open the popup
+          function myFunction() {
+            var popup = document.getElementById("popupAufnahmen");
+            popup.classList.toggle("show");
+          }
+        </script>
     </body>
 </html>
