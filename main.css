@@ -1,5 +1,5 @@
 body {
-    font-family: "Caveat", cursive;
+    font-family: "Kalinga";
 }
 
 .hero-title {
@@ -8,6 +8,22 @@ body {
 
 .hero-subtitle {
     font-size: 40px;
+}
+
+h1 {
+    font-family: "Caveat", cursive;
+}
+
+h2 {
+    font-family: "Caveat", cursive;
+}
+
+h3 {
+    font-family: "Caveat", cursive;
+}
+
+h4 {
+    font-family: "Caveat", cursive;
 }
 
 p,
@@ -30,11 +46,22 @@ header {
 }
 
 .logo {
-    width: 75px;
+    width: 50px;
     padding: 0;
 }
 
+.logo-small {
+    width: 30px;
+    padding: 0;
+}
+
+.bild {
+    width: 100%;
+    padding: 3%;
+}
+
 .logo-text {
+    font-family: "Caveat", cursive;
     font-size: 30px;
     margin-left: 10px;
 }
@@ -50,15 +77,15 @@ header {
     top: 0;
     left: 0;
     background: #0c0808;
-    opacity: 0.6;
+    opacity: 0.1;
 }
 
 #hero {
     background-attachment: fixed;
-    height: 80vh;
-    background-image: url(assets/header1.jpg);
-    background-size: cover;
-    background-position: center;
+    height: 55vh;
+    background-image: url(assets/logo.png);
+    background-size: 65vh;
+    background-position: 50% 60px;
     background-repeat: no-repeat;
 }
 
@@ -83,20 +110,25 @@ header {
 }
 
 #ueber {
-    background-color: #b5cfd8;
+    background-color: #B3D6A2;
 }
 
 #anmeldung {
-    background-color: #f4f3f3;
+    background-color: #70C7DA;
 }
 
 #kontakt {
-    background-color: white;
+    background-color: #F9CACB;
 }
 
 #faq {
-    background-color: #b1bed5;
+    background-color: #e3eb25;
 }
+
+#bilder {
+    background-color: #CDB696;
+}
+
 
 #start {
     margin-top: 56px;
@@ -109,6 +141,11 @@ main {
 header {
     font-family: "Amatic SC", cursive;
 }
+
+.lb-md {
+  font-size: 16px;
+}
+
 
 .social-icons,
 .button-center {
@@ -132,6 +169,43 @@ header {
     text-decoration: none !important;
 }
 
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+ position: fixed;
+ text-align: center;
+ top: 60px;
+ width: 100vh;
+ height: 50vh;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+ position: fixed;
+ bottom: 0;
+ background: rgba(0, 0, 0, 0.5);
+ color: #f1f1f1;
+ width: 100%;
+ padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+ width: 200px;
+ font-size: 18px;
+ padding: 10px;
+ border: none;
+ background: #000;
+ color: #fff;
+ cursor: pointer;
+}
+
+#myBtn:hover {
+ background: #ddd;
+ color: black;
+}
+
+
+
 @media only screen and (max-width: 768px) {
     .hero-title {
         font-size: 40px;
@@ -142,11 +216,66 @@ header {
     }
 
     #hero {
-        height: 60vh;
+        height: 50vh;
         background-attachment: scroll;
+        background-position: 50% 0.5rem;
     }
 
     .logo-text {
         font-size: 20px;
     }
+}
+
+/* Popup container */
+.popup {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+ visibility: hidden;
+ width: 500px;
+ background-color: #555;
+ color: #fff;
+ text-align: center;
+ font-size: 12px;
+ border-radius: 6px;
+ padding: 8px 0;
+ position: absolute;
+ z-index: 1;
+ bottom: 125%;
+ left: 50%;
+ margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+ content: "";
+ position: absolute;
+ top: 100%;
+ left: 50%;
+ margin-left: -5px;
+ border-width: 5px;
+ border-style: solid;
+ border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+ visibility: visible;
+ -webkit-animation: fadeIn 1s;
+ animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+ from {opacity: 0;}
+ to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+ from {opacity: 0;}
+ to {opacity:1 ;}
 }
