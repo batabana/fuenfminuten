@@ -34,7 +34,7 @@ button {
 }
 
 .landing section {
-    padding: 80px 0;
+    padding: 50px 0;
 }
 
 .compliance section {
@@ -117,16 +117,20 @@ header {
     background-color: #70C7DA;
 }
 
-#kontakt {
+#video {
     background-color: #F9CACB;
 }
 
-#faq {
+#kontakt {
     background-color: #e3eb25;
 }
 
-#bilder {
+#faq {
     background-color: #CDB696;
+}
+
+#bilder {
+    background-color: #B3D6A2;
 }
 
 
@@ -158,6 +162,10 @@ header {
 
 .upload-button {
     color: white;
+}
+
+.top-buttons {
+    padding: 25px;
 }
 
 .logo-chemnitz {

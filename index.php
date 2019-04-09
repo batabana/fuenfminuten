@@ -123,7 +123,21 @@ if(!empty($_POST)) {
 
         </header>
         <main class="landing">
+
             <section id="ueber">
+              <div class="button-center">
+                  <a
+                      href="#anmeldung"
+                      class="top-buttons"
+                      ><button type="button" class="btn btn-warning">Künstleranmeldung</button></a
+                  >
+                  <a
+                      href="#video"
+                      class="top-buttons"
+                      ><button type="button" class="btn btn-warning">Video hochladen</button></a
+                  >
+              </div>
+              <br/><br/>
                 <div class="container">
                     <div class="col-lg-8 mx-auto">
                         <h2>Die kürzesten Straßenkünstler-Aktionen Deutschlands</h2>
@@ -348,9 +362,15 @@ if(!empty($_POST)) {
                                 <input type="submit" class="btn btn-primary" value="Daten senden" class="submit" />
                             </div>
                         </form>
-                        <br />
+                      </div>
+                  </div>
+                </section>
+                <section id="video">
+                  <div class="container">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>Du hast bereits ein Video gedreht?</h2>
                         <p>
-                            Du hast bereits ein Video gedreht? Dann lade es hier hoch und wir sorgen dafür, dass es an
+                            Dann lade es hier hoch und wir sorgen dafür, dass es an
                             öffentlichen Orten gezeigt wird :)
                         </p>
                         <div class="button-center">
@@ -491,6 +511,11 @@ if(!empty($_POST)) {
                             sind. Dafür sind eure Videos da, sie werden an verschiedenen Orten der Stadt und in den
                             sozialen Medien veröffentlicht. Schaut euch unsere Social Media-Kanäle und unsere Website
                             an. Ihr könnt auch unseren Newsletter abonnieren, um auf dem Laufenden gehalten zu werden.
+                        </p>
+                        <h3>Müssen wir einen Geldhut aufstellen?</h3>
+                        <p>
+                          Es ist kein Muss, allerdings gehört es in der Straßenkunst dazu. Die Passanten und Bevölkerung
+                          werden sich freuen, sich mit ihrem freiwilligen Beitrag daran zu beteiligen! Gebt ihnen eine Chance zu partizipieren. ;)
                         </p>
                         <!-- <p>
                             * Mit allen Personenbeschreibungen sprechen wir jedes Geschlecht an, verwenden in Texten
