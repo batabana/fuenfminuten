@@ -4,13 +4,15 @@ if(!empty($_POST)) {
   try {
     $dbh = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sth = $dbh->prepare("INSERT INTO Kontaktformular (name, `geburtsdatum`, instrumente, musikrichtungen, disziplin, musikbegleitung, dateiname, `e-mail`, telefon, kontaktzeiten, motivation, anmerkungen, woher, datenschutz) VALUES (:name, :geburtsdatum, :instrumente, :musikrichtungen, :disziplin, :musikbegleitung, :dateiname, :email, :telefon, :kontaktzeiten, :motivation, :anmerkungen, :woher, :datenschutz)");
+    $sth = $dbh->prepare("INSERT INTO Kontaktformular (name, `geburtsdatum`, instrumente, musikrichtungen, disziplin, musikbegleitung, gruppe, dateiname, `e-mail`, telefon, kontaktzeiten, motivation, anmerkungen, woher, datenschutz) VALUES (:name, :geburtsdatum, :instrumente, :musikrichtungen, :disziplin, :musikbegleitung, :gruppe, :dateiname, :email, :telefon, :kontaktzeiten, :motivation, :anmerkungen, :woher, :datenschutz)");
     $sth->bindParam(':name', $_POST['name']);
     $sth->bindParam(':geburtsdatum', $_POST['geburtsdatum']);
     $sth->bindParam(':instrumente', $_POST['instrumente']);
     $sth->bindParam(':musikrichtungen', $_POST['musikrichtungen']);
     $sth->bindParam(':disziplin', $_POST['disziplin']);
     $sth->bindParam(':musikbegleitung', $_POST['musikbegleitung']);
+    $sth->bindParam(':dateiname', $_POST['dateiname']);
+    $sth->bindParam(':gruppe', $_POST['gruppe']);
     $sth->bindParam(':email', $_POST['email']);
     $sth->bindParam(':telefon', $_POST['telefon']);
     $sth->bindParam(':kontaktzeiten', $_POST['kontaktzeiten']);
@@ -18,7 +20,6 @@ if(!empty($_POST)) {
     $sth->bindParam(':anmerkungen', $_POST['anmerkungen']);
     $sth->bindParam(':woher', $_POST['woher']);
     $sth->bindParam(':datenschutz', $_POST['datenschutz']);
-    $sth->bindParam(':dateiname', $_POST['dateiname']);
 
     if(!$sth->execute()) {
       $execErr = "Fehler beim Speichern der Daten";
@@ -293,6 +294,15 @@ if(!empty($_POST)) {
                                         placeholder="Klassik, Rock, .."
                                     />
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="lb-md">Gehörst du einer Gruppe oder einem Verein an? Dann trage den Name hier ein:</label>
+                                <input
+                                    name="gruppe"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Name der Gruppe/des Vereins"
+                                />
                             </div>
                             <div class="form-group">
                                 <label class="lb-md">Du hast bereits ein Video gedreht? Dann lade es unter diesem Formular hoch & trage hier den Dateinamen ein, damit wir deine Daten zuordnen können.</label>
