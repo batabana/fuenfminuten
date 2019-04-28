@@ -80,13 +80,33 @@ if(!empty($_POST)) {
             <div class="collapse navbar-collapse" id="main-navbar">
                 <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix" id="navbar">
                     <li class="nav-item">
-                        <a class="nav-link" href="#ueber">
-                            Über
+                        <a class="nav-link" href="#teaser">
+                            Teaser
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aufruf">
+                            Aufruf
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bilder">
+                            Bilder
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#anmeldung">
                             Anmeldung
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#video">
+                            Video hochladen
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ueber">
+                            Über
                         </a>
                     </li>
                     <li class="nav-item">
@@ -100,11 +120,6 @@ if(!empty($_POST)) {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#bilder">
-                            Bilder
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="/impressum.html">
                             Impressum & Datenschutz
                         </a>
@@ -115,121 +130,31 @@ if(!empty($_POST)) {
         <header id="start">
             <div class="overlay"></div>
             <div class="hero-text"></div>
-            <div id="hero">
-              <!--iframe id="myVideo" align="center" src="https://www.youtube-nocookie.com/embed/c55IJPmZmew"
-              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
-            </div>
-
-            </div>
-
+            <div id="hero"></div>
         </header>
         <main class="landing">
-
-            <section id="ueber">
-              <div class="button-center">
-                  <a
-                      href="#anmeldung"
-                      class="top-buttons"
-                      ><button type="button" class="btn btn-warning">Künstleranmeldung</button></a
-                  >
-                  <a
-                      href="#video"
-                      class="top-buttons"
-                      ><button type="button" class="btn btn-warning">Video hochladen</button></a
-                  >
+          <section id="teaser">
+            <div class="container">
+              <div class="embed-container">
+                <!--560x315-->
+                <iframe src="https://www.youtube.com/embed/DCMAS3xRBr4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
-              <br/><br/>
+            </div>
+          </section>
+            <section id="aufruf">
+              <div class="container">
+                <div class="col-lg-8 mx-auto">
+                  <a href="#anmeldung"><img src="assets/Postkarten_17_04.png" alt="Aufruf" class="bild" /></a>
+                </div>
+              </div>
+            </section>
+            <section id="bilder">
                 <div class="container">
                     <div class="col-lg-8 mx-auto">
-                        <h2>Die kürzesten Straßenkünstler-Aktionen Deutschlands</h2>
-                        <p>
-                            <span class="font-weight-bolder">Fünf Minuten</span>, das Kulturprojekt FÜR ALLE, die Lust
-                            haben, ihre Freude am Tanzen und Musizieren zu zeigen.
-
-                            Unser Ziel ist es, die Straßenkünstlerszene in Chemnitz* anzusiedeln!
-                        </p>
-                        <h2>Das Konzept</h2>
-                        <p>
-                            <span class="font-weight-bolder">Ein Musiker**, zwei Tänzer**, eine Kamera und Chemnitz.</span>
-                            Wir schaffen dir 5 Minuten Raum für <span class="font-weight-bolder">deinen freien Auftritt</span>
-                            mit Livemusik*** und Tanz vor einer Kamera. Eine Aufzeichnung, ohne Publikum zu erwarten,
-                            ohne Ankündigung. Wir überraschen Chemnitz!
-
-                            Im nächsten Schritt präsentieren wir dein Video im Rahmen des “fünf-Minuten-Filmfestivals”, um
-                            die Stadt aus einer anderen Perspektive zu zeigen. Wir wollen damit die Straßenkunst für alle
-                            zugänglich machen und den Alltag und die schönen Ecken von Chemnitz mit Emotionen, Kunst und
-                            Lebenskultur harmonisieren. Dabei trägst du deinen bunten Beitrag zur Bewerbung als Kulturhauptstadt
-                            Europas 2025!
-                        </p>
-                        <blockquote class="blockquote text-center">
-                            <p class="mb-0">
-                                <i>"Das Gute Gelingen ist zwar nichts Kleines, aber es fängt mit Kleinigkeiten an."</i>
-                            </p>
-                            <footer class="blockquote-footer">
-                                <cite title="Source Title">Sokrates</cite>
-                            </footer>
-                        </blockquote>
-                        <h2>Deine Teilnahme</h2>
-                        <p>
-                          Kurz zusammengefasst: im öffentlichen Raum auftreten, ein Video im Querformat davon (Dauer max. 5 min)
-                          aufnehmen und es uns zukommen lassen (trage dich <a href="#anmeldung">hier</a> ein und lade das Video hoch). Es gibt zwei Varianten
-                          für die Teilnahme:
-
-                            <li>Variante A „das selbstständige Ensemble“: Die Künstlergruppe für das „fünf-Minuten-Video“ (also
-                              Musiker und Tänzer) ist von euch selbst schon gebildet.</li>
-                            <li>Variante B „die Künstler-Börse“: Ihr wollt performen, euch fehlt aber der passende Tänzer oder Musiker?
-                              Dann tragt euch in unsere Künstler-Börse ein (siehe <a href="#anmeldung">Künstleranmeldung</a>) und das Team von „fünf Minuten“
-                              wird euch euer gewünschtes Ensemble und einen Auftrittsort mitteilen.</li>
-
-                          Brauchst du Unterstützung, z. B. bei der Aufnahme oder Zusendung des Videos, setze dich mit uns in <a href="#kontakt">Kontakt</a>.
-                          <br/><br/>
-                          Werde Teil unserer Aktion, wir wollen zusammen die Straßenkunstszene revolutionieren!<br/>
-                          <img src="assets/bild5klein.jpg" alt="bild" class="bild" />
-                        </p>
-                        <h2>Unser Auftrag</h2>
-                        <p>
-                          Wir wollen der Welt zeigen, dass wir mit wenig Zeit unseren Alltag selbst in die Hand nehmen und ihn jeden
-                          Tag bunter gestalten können. Wir können die Orte, an denen wir leben, wieder neu entdecken und wertschätzen
-                          lernen!
-
-                          Fünf Minuten... die zeigen, wer wir wirklich sind und sein können!
-
-                          Das Team von fünf Minuten ist ab jetzt für euch bereit. Wir helfen euch, Spaß zu verbreiten! :D
-                        </p>
-                        <p class="small">
-                          *Kooperations-Ortschaften, die sich am Chemnitzer Modell und somit auch an diesem Projekt beteiligen:
-                          Amtsberg, Annaberg-Buchholz, Aue, Augustusburg, Burgstädt, Burkhardtsdorf, Flöha, Frankenberg, Hainichen,
-                          Jahnsdorf/Erzgebirge, Lichtenau, Limbach-Oberfrohna, Lößnitz, Mittweida, Neukirchen/Erzgebirge, Niederdorf,
-                          Niederwiesa, Niederwürschnitz, Oelsnitz, Olbernhau, Pockau-Lengefeld, Stollberg/Erzgebirge, Thalheim/Erzgebirge,
-                          Zwönitz.<br/>
-
-                          **Mit allen Personenbeschreibungen sprechen wir jedes Geschlecht an, verwenden in Texten aber die jeweils kürzeste
-                          Variante. Unter Musik und Tanz werden Performer der auditiven bzw. der Bewegungskünste verstanden. Eine genauere
-                          Trennung der Darstellungsformen muss nicht erfolgen, zu beachten ist nur, dass Darstellende Künste in der Performance
-                          zu hören und zu sehen sind.<br/>
-
-                          ***Improvisiertes Musikstück, ein Public-Domain-Lied, bzw. befreit von GEMA-Gebühren.
-                        </p>
-                        <div class="social-icons">
-                            <a
-                                href="https://www.facebook.com/fuenfminuteneu"
-                                target="_blank"
-                            ><img src="assets/fb_logo2.png" alt="logo" class="logo" /></a>
-                            <a
-                                href="https://www.instagram.com/fuenfminuteneu/"
-                                target="_blank"
-                            ><img src="assets/insta_logo2.png" alt="logo" class="logo" /></a>
-                            <a
-                               href="https://twitter.com/fuenfminuteneu"
-                               target="_blank"
-                            ><img src="assets/twitter_logo2.png" alt="logo" class="logo" />
-                            </a>
-                            <a
-                                href="https://www.youtube.com/channel/UC-PGCE6J0Uy8f97_ZcBWKRg"
-                                target="_blank"
-                            ><img src="assets/youtube_logo2.png" alt="logo" class="logo" />
-                            </a>
-                        </div>
+                      <img src="assets/bild1klein.png" alt="bild" class="bild" />
+                      <img src="assets/bild2klein.png" alt="bild" class="bild" />
+                      <img src="assets/bild3klein.png" alt="bild" class="bild" />
+                      <img src="assets/bild4klein.png" alt="bild" class="bild" />
                     </div>
                 </div>
             </section>
@@ -415,6 +340,114 @@ if(!empty($_POST)) {
                     </div>
                 </div>
             </section>
+            <section id="ueber">
+              <!--div class="button-center">
+                  <a
+                      href="#anmeldung"
+                      class="top-buttons"
+                      ><button type="button" class="btn btn-warning">Künstleranmeldung</button></a
+                  >
+                  <a
+                      href="#video"
+                      class="top-buttons"
+                      ><button type="button" class="btn btn-warning">Video hochladen</button></a
+                  >
+              </div>
+              <br/><br/-->
+                <div class="container">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>Die kürzesten Straßenkünstler-Aktionen Deutschlands</h2>
+                        <p>
+                            <span class="font-weight-bolder">Fünf Minuten</span>, das Kulturprojekt FÜR ALLE, die Lust
+                            haben, ihre Freude am Tanzen und Musizieren zu zeigen.
+
+                            Unser Ziel ist es, die Straßenkünstlerszene in Chemnitz* anzusiedeln!
+                        </p>
+                        <h2>Das Konzept</h2>
+                        <p>
+                            <span class="font-weight-bolder">Ein Musiker**, zwei Tänzer**, eine Kamera und Chemnitz.</span>
+                            Wir schaffen dir 5 Minuten Raum für <span class="font-weight-bolder">deinen freien Auftritt</span>
+                            mit Livemusik*** und Tanz vor einer Kamera. Eine Aufzeichnung, ohne Publikum zu erwarten,
+                            ohne Ankündigung. Wir überraschen Chemnitz!
+
+                            Im nächsten Schritt präsentieren wir dein Video im Rahmen des “fünf-Minuten-Filmfestivals”, um
+                            die Stadt aus einer anderen Perspektive zu zeigen. Wir wollen damit die Straßenkunst für alle
+                            zugänglich machen und den Alltag und die schönen Ecken von Chemnitz mit Emotionen, Kunst und
+                            Lebenskultur harmonisieren. Dabei trägst du deinen bunten Beitrag zur Bewerbung als Kulturhauptstadt
+                            Europas 2025!
+                        </p>
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0">
+                                <i>"Das Gute Gelingen ist zwar nichts Kleines, aber es fängt mit Kleinigkeiten an."</i>
+                            </p>
+                            <footer class="blockquote-footer">
+                                <cite title="Source Title">Sokrates</cite>
+                            </footer>
+                        </blockquote>
+                        <h2>Deine Teilnahme</h2>
+                        <p>
+                          Kurz zusammengefasst: im öffentlichen Raum auftreten, ein Video im Querformat davon (Dauer max. 5 min)
+                          aufnehmen und es uns zukommen lassen (trage dich <a href="#anmeldung">hier</a> ein und lade das Video hoch). Es gibt zwei Varianten
+                          für die Teilnahme:
+
+                            <li>Variante A „das selbstständige Ensemble“: Die Künstlergruppe für das „fünf-Minuten-Video“ (also
+                              Musiker und Tänzer) ist von euch selbst schon gebildet.</li>
+                            <li>Variante B „die Künstler-Börse“: Ihr wollt performen, euch fehlt aber der passende Tänzer oder Musiker?
+                              Dann tragt euch in unsere Künstler-Börse ein (siehe <a href="#anmeldung">Künstleranmeldung</a>) und das Team von „fünf Minuten“
+                              wird euch euer gewünschtes Ensemble und einen Auftrittsort mitteilen.</li>
+
+                          Brauchst du Unterstützung, z. B. bei der Aufnahme oder Zusendung des Videos, setze dich mit uns in <a href="#kontakt">Kontakt</a>.
+                          <br/><br/>
+                          Werde Teil unserer Aktion, wir wollen zusammen die Straßenkunstszene revolutionieren!<br/>
+                          <img src="assets/bild5klein.jpg" alt="bild" class="bild" />
+                        </p>
+                        <h2>Unser Auftrag</h2>
+                        <p>
+                          Wir wollen der Welt zeigen, dass wir mit wenig Zeit unseren Alltag selbst in die Hand nehmen und ihn jeden
+                          Tag bunter gestalten können. Wir können die Orte, an denen wir leben, wieder neu entdecken und wertschätzen
+                          lernen!
+
+                          Fünf Minuten... die zeigen, wer wir wirklich sind und sein können!
+
+                          Das Team von fünf Minuten ist ab jetzt für euch bereit. Wir helfen euch, Spaß zu verbreiten! :D
+                        </p>
+                        <p class="small">
+                          *Kooperations-Ortschaften, die sich am Chemnitzer Modell und somit auch an diesem Projekt beteiligen:
+                          Amtsberg, Annaberg-Buchholz, Aue, Augustusburg, Burgstädt, Burkhardtsdorf, Flöha, Frankenberg, Hainichen,
+                          Jahnsdorf/Erzgebirge, Lichtenau, Limbach-Oberfrohna, Lößnitz, Mittweida, Neukirchen/Erzgebirge, Niederdorf,
+                          Niederwiesa, Niederwürschnitz, Oelsnitz, Olbernhau, Pockau-Lengefeld, Stollberg/Erzgebirge, Thalheim/Erzgebirge,
+                          Zwönitz.<br/>
+
+                          **Mit allen Personenbeschreibungen sprechen wir jedes Geschlecht an, verwenden in Texten aber die jeweils kürzeste
+                          Variante. Unter Musik und Tanz werden Performer der auditiven bzw. der Bewegungskünste verstanden. Eine genauere
+                          Trennung der Darstellungsformen muss nicht erfolgen, zu beachten ist nur, dass Darstellende Künste in der Performance
+                          zu hören und zu sehen sind.<br/>
+
+                          ***Improvisiertes Musikstück, ein Public-Domain-Lied, bzw. befreit von GEMA-Gebühren.
+                        </p>
+                        <div class="social-icons">
+                            <a
+                                href="https://www.facebook.com/fuenfminuteneu"
+                                target="_blank"
+                            ><img src="assets/fb_logo2.png" alt="logo" class="logo" /></a>
+                            <a
+                                href="https://www.instagram.com/fuenfminuteneu/"
+                                target="_blank"
+                            ><img src="assets/insta_logo2.png" alt="logo" class="logo" /></a>
+                            <a
+                               href="https://twitter.com/fuenfminuteneu"
+                               target="_blank"
+                            ><img src="assets/twitter_logo2.png" alt="logo" class="logo" />
+                            </a>
+                            <a
+                                href="https://www.youtube.com/channel/UC-PGCE6J0Uy8f97_ZcBWKRg"
+                                target="_blank"
+                            ><img src="assets/youtube_logo2.png" alt="logo" class="logo" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="kontakt">
                 <div class="container">
                     <div class="col-lg-8 mx-auto">
@@ -531,16 +564,6 @@ if(!empty($_POST)) {
                             * Mit allen Personenbeschreibungen sprechen wir jedes Geschlecht an, verwenden in Texten
                             aber die jeweils kürzeste Variante.
                         </p> -->
-                    </div>
-                </div>
-            </section>
-            <section id="bilder">
-                <div class="container">
-                    <div class="col-lg-8 mx-auto">
-                      <img src="assets/bild1klein.png" alt="bild" class="bild" />
-                      <img src="assets/bild2klein.png" alt="bild" class="bild" />
-                      <img src="assets/bild3klein.png" alt="bild" class="bild" />
-                      <img src="assets/bild4klein.png" alt="bild" class="bild" />
                     </div>
                 </div>
             </section>
