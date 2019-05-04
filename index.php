@@ -151,8 +151,8 @@ if(!empty($_POST)) {
             <section id="bilder">
                 <div class="container">
                     <div class="col-lg-8 mx-auto">
-                      <img src="assets/bild1klein.png" alt="bild" class="bild" />
                       <img src="assets/bild2klein.png" alt="bild" class="bild" />
+                      <img src="assets/bild1klein.png" alt="bild" class="bild" />
                       <img src="assets/bild3klein.png" alt="bild" class="bild" />
                       <img src="assets/bild4klein.png" alt="bild" class="bild" />
                     </div>
