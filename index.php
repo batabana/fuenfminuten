@@ -290,7 +290,7 @@ if(!empty($_POST)) {
                                 />
                                 <label class="form-check-label">
                                     Ich akzeptiere die
-                                    <a href="/impressum.html" target="_blank">Datenschutzerklärung</a> (Pflichtfeld).
+                                    <a href="/impressum.html" target="_blank">Datenschutzerklärung und Einverständniserklärung für Bild-, Ton- und Filmaufnahmen</a> (Pflichtfeld).
                                 </label>
                             </div>
                             <div class="button-center">
@@ -318,24 +318,8 @@ if(!empty($_POST)) {
                         </div>
                         <p>
                           <br/>
-                          <div class="popup" onclick="myFunction()">Mit dem Hochladen eines Videos erklärst du dich mit der Nutzung der Aufnahmen
-                            einverstanden (für Details klicke hier).
-                           <span class="popuptext" id="popupAufnahmen"><b>Einverständniserklärung für Bild-, Ton- und Filmaufnahmen</b><br/><br/>
-                             Hiermit erkläre ich mich einverstanden, dass die von mir und/oder meinen Kindern gemachten Bild-,
-                             Ton- und Filmaufnahmen für Veröffentlichungen auf Webseiten und Social-Media-Kanälen sowie in
-                             anderen Publikationen des Kulturprojekts „Fünf Minuten“ unentgeltlich genutzt werden können.
-                             Das Kulturprojekt „Fünf Minuten“ ist damit zu einer zeitlich und örtlich uneingeschränkten und
-                             unbegrenzten Nutzung, Speicherung und Verwendung der Bilder berechtigt.<br/><br/>
-                             Sofern Fotos auf der Webseite veröffentlicht werden, ist technisch nicht auszuschließen, dass
-                             ein Bild aus einem sog. Screenshot isoliert wird. Im Falle eines Widerrufes der Einwilligung in
-                             eine Veröffentlichung kann „Fünf Minuten“ daher nicht ausschließen, dass das Bildnis des Betroffenen
-                             trotz Löschung des Fotos/Videos auf der „Fünf Minuten“-Webseite ggf. durch Dritte weiterverwendet
-                             wird. Dies gilt auch für Fotos, die wie oben beschrieben an Dritte weitergegeben wurden.<br/><br/>
-                             Eine Verwendung von Fotos und/oder Videos mit Minderjährigen im Alter bis einschließlich 17 Jahren
-                             bedarf der Zustimmung des gesetzlichen Vertreters. Darüber hinaus ist ab der Vollendung des
-                             14. Lebensjahres auch die Einwilligung des Minderjährigen selbst erforderlich.
-                           </span>
-                          </div>
+                          Mit dem Hochladen eines Videos erklärst du dich mit der Nutzung der Aufnahmen
+                            einverstanden (siehe <a href="/impressum.html#bildverwendung" target="_blank">hier</a>).
                         </p>
                     </div>
                 </div>
